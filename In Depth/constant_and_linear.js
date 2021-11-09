@@ -12,7 +12,6 @@ linearFunction(array);
 // constant -> any step that doesn't scale with the input to the function. it takes the constant time to return a result. O(1)
 
 
-
 const linFunc = ((arr) => {
     for (let i = 0; i < arr.length; i++) {  // O(n) -> linear
         console.log(100 * 100000);  // O(1) -> constant
