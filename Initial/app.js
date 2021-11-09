@@ -28,12 +28,12 @@ for (let i = 0; i < n; i++) {
     }
 }
 
-// O(log n)
+// O(log n) -> lograthmic
 while (n > 0) {
     n /= 2;      // divided by 2
 }
 
-// O(n log n)
+// O(n log n) -> lograthmic
 // O(n)
 for (let i = 0; i < n; i++) {
     // O(log n)
