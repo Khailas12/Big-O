@@ -14,7 +14,6 @@ const binarySearch = ((array, start, end, target) => {
     let midIndex = Math.floor((start + end) / 2);
     console.log(array.slice(start, end));   // only shows a part of the start and the end instead of showing the full array.
     
-
     if (array[midIndex] === target) {
         return true;
     }
