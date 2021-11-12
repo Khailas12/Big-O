@@ -1,3 +1,5 @@
+let array = [12, 3, 16, 6, 5, 1];
+
 const mergeSort = ((array) => {
     if (array.length < 2) {
         return array;
@@ -13,25 +15,24 @@ const mergeSort = ((array) => {
 
 
 const merge = ((leftArray, rightArray) => {
-    let resultArray = [];
     let leftIndex = 0;
     let rightIndex = 0;
-
+    let resultArray = [];
+    
     while (leftIndex < leftArray.length && rightIndex < rightArray.length) {
         if (leftArray[leftIndex] < rightArray[rightIndex]) {
-            resultArray.push(leftArray[leftIndex]); 
-            leftIndex += 1;     // appends to the resultarray
+            resultArray.push(leftArray[leftIndex]);     // appends to the resultarray
+            leftIndex += 1;     // jumps to next index from 0 to 1 and so on
         }
         else {
             resultArray.push(rightArray[rightIndex]);
-            rightIndex += 1;
+            rightIndex += 1; 
         }
     }
     // resultArray + leftArray + rightArray
     return resultArray.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));
 });
 
-let array = [12, 3, 16, 6, 5, 1];
 console.log(mergeSort(array));
 
 
