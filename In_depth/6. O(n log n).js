@@ -15,4 +15,4 @@ nLogN(4);
 // O(n log n) = O(n * log n)
 
 // both while and for loop has the complexity of O(n) considering that both gets iterated by the full size of y. which is 4 as assigned. so the splitted n = 4 into 2 will also get iterated 4 times.
-// processing time increases linearly with the size of n.
+// processing time increases linearly with the size of n.2
