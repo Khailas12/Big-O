@@ -1,17 +1,18 @@
 let array = [12, 3, 16, 6, 5, 1];
 
-const mergeSort = ((array) => {
-    if (array.length < 2) {
+const mergeSort = ((array) => {     // O(log n)
+    if (array.length < 2) {     // minimum length of the array not less than 2 elements in it. eg: [1, 2]
         return array;
     }
-
-    const middleIndex = Math.floor(array.length / 2);
+    
+    const middleIndex = Math.floor(array.length / 2);   // splits into 2 seperate arrays 
     const leftArray = array.slice(0, middleIndex);
     const rightArray = array.slice(middleIndex, array.length);
 
-    // returning the result of the call to the function
-    return merge(mergeSort(leftArray), mergeSort(rightArray));  // recursive call
+    // this merges the splitted arrays into a single one after order sorting.
+    return merge(mergeSort(leftArray), mergeSort(rightArray));  // recursive call   O(n)
 });
+// O(n log n)
 
 
 const merge = ((leftArray, rightArray) => {
